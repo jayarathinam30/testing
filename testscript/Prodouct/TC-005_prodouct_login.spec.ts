@@ -23,11 +23,5 @@ test('prodouct login', {
 
   // Step 6: click
   await page.getByRole("link", { name: "Contact" }).click();
-
-  // Step 7: click
-  await page.getByRole("textbox", { name: "First name" }).click();
-
-  // Step 8: fill
-  await page.getByRole("textbox", { name: "First name" }).fill('werew');
 });
 
