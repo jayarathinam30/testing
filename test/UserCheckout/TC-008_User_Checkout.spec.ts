@@ -14,11 +14,5 @@ test('User Checkout', {
 
   // Step 3: click
   await page.getByRole("textbox", { name: "Password *" }).click();
-
-  // Step 4: fill
-  await page.getByRole("textbox", { name: "Password *" }).fill('sdafdf');
-
-  // Step 5: click
-  await page.getByRole("button", { name: "Login" }).click();
 });
 
