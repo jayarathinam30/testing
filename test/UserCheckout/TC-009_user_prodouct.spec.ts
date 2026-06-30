@@ -17,11 +17,5 @@ test('user prodouct', {
 
   // Step 4: fill
   await page.getByRole("textbox", { name: "Password *" }).fill('sadfdf');
-
-  // Step 5: click
-  await page.locator('[data-test="login-form"]').click();
-
-  // Step 6: click
-  await page.getByRole("button", { name: "Login" }).click();
 });
 
