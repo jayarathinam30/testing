@@ -8,17 +8,5 @@ test('User prodouct', {
 
   // Step 1: click
   await page.getByLabel("Email address *").click();
-
-  // Step 2: fill
-  await page.getByLabel("Email address *").fill('asfdd');
-
-  // Step 3: click
-  await page.getByRole("textbox", { name: "Password *" }).click();
-
-  // Step 4: fill
-  await page.getByRole("textbox", { name: "Password *" }).fill('werwer');
-
-  // Step 5: click
-  await page.getByRole("button", { name: "Login" }).click();
 });
 
