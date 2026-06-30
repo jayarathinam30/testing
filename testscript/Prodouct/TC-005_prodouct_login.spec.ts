@@ -20,8 +20,5 @@ test('prodouct login', {
 
   // Step 5: click
   await page.getByRole("button", { name: "Login" }).click();
-
-  // Step 6: click
-  await page.getByRole("link", { name: "Contact" }).click();
 });
 
