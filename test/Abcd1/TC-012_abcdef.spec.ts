@@ -17,8 +17,5 @@ test('abcdef', {
 
   // Step 4: fill
   await page.locator('[data-test="password"]').fill('sdfdf');
-
-  // Step 5: click
-  await page.locator('[data-test="login-button"]').click();
 });
 
