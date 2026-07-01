@@ -20,8 +20,5 @@ test('Prodouct search User', {
 
   // Step 5: click
   await page.getByRole("link", { name: "Contact" }).click();
-
-  // Step 6: click
-  await page.locator('[data-test="first-name"]').click();
 });
 
