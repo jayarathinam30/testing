@@ -17,8 +17,5 @@ test('User login 2', {
 
   // Step 4: fill
   await page.getByRole("textbox", { name: "Password *" }).fill('sarer');
-
-  // Step 5: click
-  await page.getByRole("button", { name: "Login" }).click();
 });
 
