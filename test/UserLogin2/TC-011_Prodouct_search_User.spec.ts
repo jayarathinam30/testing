@@ -14,8 +14,5 @@ test('Prodouct search User', {
 
   // Step 3: click
   await page.locator('[data-test="password"]').click();
-
-  // Step 4: fill
-  await page.locator('[data-test="password"]').fill('werqere');
 });
 
