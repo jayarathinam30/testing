@@ -11,11 +11,5 @@ test('abcdef', {
 
   // Step 2: fill
   await page.locator('[data-test="username"]').fill('dfsdf');
-
-  // Step 3: click
-  await page.locator('[data-test="password"]').click();
-
-  // Step 4: fill
-  await page.locator('[data-test="password"]').fill('sdfdf');
 });
 
