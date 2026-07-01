@@ -23,8 +23,5 @@ test('Prodouct search User', {
 
   // Step 6: click
   await page.locator('[data-test="first-name"]').click();
-
-  // Step 7: fill
-  await page.locator('[data-test="first-name"]').fill('sadfdf');
 });
 
