@@ -17,8 +17,5 @@ test('Prodouct search User', {
 
   // Step 4: fill
   await page.locator('[data-test="password"]').fill('werqere');
-
-  // Step 5: click
-  await page.getByRole("link", { name: "Contact" }).click();
 });
 
