@@ -37,7 +37,75 @@ test(
     });
 
     await test.step('click', async () => {
-      await page.locator('[data-test="login-button"]').click();
+      await page.locator('[data-test="login-credentials-container"]').locator('[data-test="login-credentials"]').click();
+    });
+
+    await test.step('click', async () => {
+      await page.getByRole("textbox", { name: "Username" }).click();
+    });
+
+    await test.step('fill', async () => {
+      await page.getByRole("textbox", { name: "Username" }).fill('standard_user');
+    });
+
+    await test.step('click', async () => {
+      await page.getByRole("textbox", { name: "Password" }).click();
+    });
+
+    await test.step('click', async () => {
+      await page.getByRole("button", { name: "Login" }).click();
+    });
+
+    await test.step('fill', async () => {
+      await page.getByRole("textbox", { name: "Password" }).fill('secret_sauce');
+    });
+
+    await test.step('click', async () => {
+      await page.locator('locator("xpath=/html/body[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[5]/div[2]/div[1]/div[1]")').click();
+    });
+
+    await test.step('click', async () => {
+      await page.locator('locator("xpath=/html/body[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[4]/div[2]/div[1]/div[1]")').click();
+    });
+
+    await test.step('click', async () => {
+      await page.locator('locator("xpath=/html/body[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[2]/div[1]/div[1]")').click();
+    });
+
+    await test.step('click', async () => {
+      await page.getByText("Test.allTheThings() T-Shirt (Red)").click();
+    });
+
+    await test.step('click', async () => {
+      await page.getByRole("button", { name: "Add to cart", exact: true }).click();
+    });
+
+    await test.step('click', async () => {
+      await page.getByRole("button").filter({ hasText: "Back to products" }).click();
+    });
+
+    await test.step('click', async () => {
+      await page.getByText("Sauce Labs Bike Light").click();
+    });
+
+    await test.step('click', async () => {
+      await page.getByRole("button", { name: "Add to cart", exact: true }).click();
+    });
+
+    await test.step('click', async () => {
+      await page.getByRole("button").filter({ hasText: "Back to products" }).click();
+    });
+
+    await test.step('click', async () => {
+      await page.getByText("Sauce Labs Backpack").click();
+    });
+
+    await test.step('click', async () => {
+      await page.getByRole("button", { name: "Add to cart", exact: true }).click();
+    });
+
+    await test.step('click', async () => {
+      await page.getByRole("button").filter({ hasText: "Back to products" }).click();
     });
 
   }
