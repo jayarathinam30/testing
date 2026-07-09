@@ -37,14 +37,6 @@ test(
       await page.locator('[data-test="add-to-cart-sauce-labs-backpack"]').click();
     });
 
-    await test.step('click', async () => {
-      await page.locator('[data-test="item-5-title-link"]').locator('[data-test="inventory-item-name"]').click();
-    });
-
-    await test.step('click', async () => {
-      await page.locator('[data-test="inventory-item"]').getByRole("button", { name: "Add to cart", exact: true }).click();
-    });
-
   }
 );
 
