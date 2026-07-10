@@ -6,7 +6,7 @@ test(
     annotation: { type: 'QADENCE_TC_ID', description: 'TC-003' },
     tag: ['@QADENCE_TC_ID:TC-003'],
   },
-  async ({ page }) => {
+  async ({ page, request }) => {
 
 
     await test.step('Open page', async () => {
@@ -35,6 +35,24 @@ test(
 
     await test.step('click', async () => {
       await page.locator('[data-test="item-4-title-link"]').locator('[data-test="inventory-item-name"]').click();
+    });
+
+    await test.step('assert hasText', async () => {
+      await expect(page.getByText("Sauce Labs Backpack", { exact: true })).toContainText('Sauce Labs Backpack');
+    });
+
+    await test.step('assert hasText', async () => {
+      await expect(page.getByText("$29.99", { exact: true })).toContainText('$29.99');
+    });
+
+    await test.step('GET https://api.practicesoftwaretesting.com/images', async () => {
+      const apiResponse9 = await request.fetch('https://api.practicesoftwaretesting.com/images', {
+        method: 'GET',
+        headers: {
+          'accept': 'application/json',
+        },
+      });
+      expect(apiResponse9.status()).toBe(200);
     });
 
   }
